@@ -11,15 +11,14 @@
   <meta name="theme-color" content="#111111" />
   <style>
     :root{
-      /* Palette unisexe, neutre, chic */
-      --bg:#f6f6f6;          /* fond gris clair */
-      --card:#ffffff;        /* cartes */
-      --ink:#0f1113;         /* texte principal */
-      --muted:#6b7280;       /* texte secondaire */
-      --line:#e8e8ea;        /* bordures fines */
-      --accent:#111111;      /* noir profond */
-      --accent-2:#949aa3;    /* gris froid premium */
-      --wa:#25D366;          /* WhatsApp */
+      --bg:#f6f6f6;
+      --card:#ffffff;
+      --ink:#0f1113;
+      --muted:#6b7280;
+      --line:#e8e8ea;
+      --accent:#111111;
+      --accent-2:#949aa3;
+      --wa:#25D366;
       --shadow:0 10px 30px rgba(0,0,0,.06);
     }
     *{box-sizing:border-box}
@@ -27,8 +26,7 @@
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
 
-    /* ===== NAV ===== */
-    header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);z-index:50}
+    header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);z-index:50;background:#fff;border-bottom:1px solid var(--line)}
     .nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
     .logo{display:flex;align-items:center;gap:12px}
     .logo svg{width:42px;height:42px;filter:drop-shadow(var(--shadow))}
@@ -36,7 +34,6 @@
     nav a{margin:0 10px;color:#2b2f33;font-weight:600}
     nav a:hover{color:#000}
 
-    /* ===== HERO ===== */
     .hero{background:linear-gradient(180deg,#f6f6f6 0%, #efefef 100%);border-bottom:1px solid var(--line)}
     .hero-wrap{max-width:1200px;margin:auto;padding:46px 20px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
     .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#111;color:#fff;font-weight:700;font-size:12px}
@@ -46,12 +43,10 @@
     .cta{display:flex;gap:12px;flex-wrap:wrap}
     .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);font-weight:700;box-shadow:var(--shadow);background:#fff}
     .btn.primary{background:#111;color:#fff;border-color:#111}
-    .btn.ghost{background:#fff;color:#111}
     .btn.wa{background:var(--wa);color:#fff;border-color:var(--wa)}
 
     .hero-img{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.10)}
 
-    /* ===== SECTIONS ===== */
     section{max-width:1200px;margin:48px auto;padding:0 20px}
     h2{font-size:26px;margin:0 0 16px}
 
@@ -64,16 +59,11 @@
     .chip{font-size:12px;padding:4px 10px;border-radius:999px;background:#f3f4f6;border:1px solid var(--line)}
     .actions{margin-top:auto;display:flex;gap:8px}
 
-    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .feature{padding:16px;border-radius:16px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
-    .feature strong{display:block;margin-bottom:6px}
-
     footer{max-width:1200px;margin:46px auto 26px;padding:0 20px;color:#5b6473}
 
     @media (max-width:980px){
       .hero-wrap{grid-template-columns:1fr}
       .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .features{grid-template-columns:1fr}
       h1{font-size:34px}
     }
     @media (max-width:640px){
@@ -83,113 +73,68 @@
   </style>
 </head>
 <body>
-  <!-- ===== NAV ===== -->
   <header>
     <div class="nav">
       <a class="logo" href="#" aria-label="YARA Cosmetics">
-        <!-- Monogramme Y minimal -->
         <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect x="2" y="2" width="60" height="60" rx="14" fill="#111"/>
-          <path d="M18 22 L32 36 L46 22" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M32 36 L32 48" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+          <!-- Ajout du R stylisé -->
+          <path d="M18 22 L32 36 L46 22" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M32 36 L32 48" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+          <text x="22" y="56" fill="white" font-size="14" font-family="Poppins" font-weight="800">R</text>
         </svg>
         <span class="brand">YARA COSMETICS</span>
       </a>
       <nav>
         <a href="#produits">Produits</a>
-        <a href="#comment">Process</a>
+        <a href="#process">Process</a>
         <a href="#livraison">Livraison</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="hero-wrap">
       <div>
         <span class="badge">Décantés 5–15 ml • Unisex</span>
-        <h1>Décantés premium, <br>esthétique minimaliste & qualité maîtrisée</h1>
-        <p class="lead">Testez avant d’acheter le grand format. Flacons stériles, étiquetage net, authentiques à partir d’originaux. Commande par WhatsApp, livraison partout au Maroc.</p>
+        <h1>YARA COSMETICS — élégance, neutralité et authenticité</h1>
+        <p class="lead">Découvrez nos décantés raffinés : cosmétiques et parfums sélectionnés, présentés dans des flacons minimalistes au design chic. Commandez facilement via WhatsApp.</p>
         <div class="cta">
-          <a class="btn wa" href="https://wa.me/2126XXXXXXXX?text=Bonjour%20YARA%20Cosmetics%2C%20je%20souhaite%20commander%20un%20d%C3%A9cant%C3%A9%20%3A%20%5BProduit%5D%20%7C%20%5BTaille%205%2F10%2F15%20ml%5D%20%7C%20Quantit%C3%A9%201" target="_blank">Commander via WhatsApp</a>
-          <a class="btn primary" href="https://docs.google.com/forms/d/FORM_ID" target="_blank">Commander par formulaire</a>
-          <a class="btn ghost" href="#produits">Voir les produits ↓</a>
+          <a class="btn wa" href="https://wa.me/2126XXXXXXXX?text=Bonjour%20YARA%20Cosmetics%2C%20je%20souhaite%20commander%20un%20d%C3%A9cant%C3%A9%20:%20%5BProduit%5D%20%7C%20%5BTaille%5D" target="_blank">Commander via WhatsApp</a>
         </div>
       </div>
       <div class="hero-img">
-        <!-- Image ton neutre (marbre / blanc / gris) -->
-        <img alt="YARA Cosmetics — still life" src="https://images.unsplash.com/photo-1596461404969-9ae70d37a36b?q=80&w=1600&auto=format&fit=crop"/>
+        <img alt="YARA Cosmetics produits" src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?q=80&w=1200&auto=format&fit=crop"/>
       </div>
     </div>
   </section>
 
-  <!-- ===== PRODUITS ===== -->
   <section id="produits">
-    <h2>Best‑sellers</h2>
+    <h2>Nos produits</h2>
     <div class="grid">
-      <!-- P1 -->
       <article class="card">
-        <div class="thumb"><img alt="Eau No.1" src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?q=80&w=1200&auto=format&fit=crop"></div>
+        <div class="thumb"><img alt="Eau No.1" src="https://images.unsplash.com/photo-1596461404969-9ae70d37a36b?q=80&w=1200&auto=format&fit=crop"></div>
         <div class="card-body">
           <strong>Eau No.1 (EDP)</strong>
           <div class="price">dès 69 MAD</div>
-          <div class="sizes"><span class="chip">5 ml</span><span class="chip">10 ml</span><span class="chip">15 ml</span></div>
-          <div class="actions">
-            <a class="btn wa" target="_blank" href="https://wa.me/2126XXXXXXXX?text=YARA%20Cosmetics%20-%20Eau%20No.1%20EDP%20-%205%20ml%20-%201%20pc">WhatsApp</a>
-            <a class="btn ghost" target="_blank" href="https://docs.google.com/forms/d/FORM_ID">Formulaire</a>
-          </div>
         </div>
       </article>
-      <!-- P2 -->
       <article class="card">
         <div class="thumb"><img alt="Citrus Vetiver" src="https://images.unsplash.com/photo-1585386959984-a41552231659?q=80&w=1200&auto=format&fit=crop"></div>
         <div class="card-body">
           <strong>Citrus Vetiver (EDT)</strong>
           <div class="price">dès 59 MAD</div>
-          <div class="sizes"><span class="chip">5 ml</span><span class="chip">10 ml</span><span class="chip">15 ml</span></div>
-          <div class="actions">
-            <a class="btn wa" target="_blank" href="https://wa.me/2126XXXXXXXX?text=YARA%20Cosmetics%20-%20Citrus%20Vetiver%20EDT%20-%2010%20ml%20-%201%20pc">WhatsApp</a>
-            <a class="btn ghost" target="_blank" href="https://docs.google.com/forms/d/FORM_ID">Formulaire</a>
-          </div>
         </div>
       </article>
-      <!-- P3 -->
       <article class="card">
         <div class="thumb"><img alt="Amber Musk" src="https://images.unsplash.com/photo-1601924582971-b0c5be49f315?q=80&w=1200&auto=format&fit=crop"></div>
         <div class="card-body">
           <strong>Amber Musk (EDP)</strong>
           <div class="price">dès 119 MAD</div>
-          <div class="sizes"><span class="chip">5 ml</span><span class="chip">10 ml</span><span class="chip">15 ml</span></div>
-          <div class="actions">
-            <a class="btn wa" target="_blank" href="https://wa.me/2126XXXXXXXX?text=YARA%20Cosmetics%20-%20Amber%20Musk%20EDP%20-%205%20ml%20-%201%20pc">WhatsApp</a>
-            <a class="btn ghost" target="_blank" href="https://docs.google.com/forms/d/FORM_ID">Formulaire</a>
-          </div>
         </div>
       </article>
     </div>
-  </section>
-
-  <!-- ===== AVANTAGES ===== -->
-  <section id="comment">
-    <h2>Process qualité</h2>
-    <div class="features">
-      <div class="feature"><strong>Hygiène & contrôle</strong><span class="muted"> Flacons stériles, seringues dédiées, scellés.</span></div>
-      <div class="feature"><strong>Traçabilité</strong><span class="muted"> Lot/date + étiquette complète (nom, ml, concentration).</span></div>
-      <div class="feature"><strong>Simple & rapide</strong><span class="muted"> Commande WhatsApp, confirmation claire, expédition 24–72h.</span></div>
-    </div>
-  </section>
-
-  <!-- ===== LIVRAISON / CONTACT ===== -->
-  <section id="livraison">
-    <h2>Livraison & Paiement</h2>
-    <p class="muted">Livraison Maroc 24–72 h selon ville/transporteur. Paiement : espèces à la livraison, virement, ou dépôt.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>WhatsApp : <a href="https://wa.me/2126XXXXXXXX" target="_blank">+212 6 XX XX XX XX</a> — Instagram : <strong>@yaracosmetics</strong> (optionnel)</p>
-    <p style="font-size:12px;color:#6b7280">YARA Cosmetics propose des décantés pour usage personnel à partir de produits originaux. Les marques citées appartiennent à leurs propriétaires respectifs.</p>
   </section>
 
   <footer>
