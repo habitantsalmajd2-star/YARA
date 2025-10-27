@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YARA • Décantés de cosmétiques & parfums</title>
-  <meta name="description" content="YARA — Décantés de cosmétiques et parfums. Flacons 5 / 10 / 15 ml. Commande WhatsApp, livraison Maroc." />
+  <title>YARA Cosmetics • Décantés de cosmétiques & parfums</title>
+  <meta name="description" content="YARA Cosmetics — Décantés de cosmétiques & parfums. Formats 5 / 10 / 15 ml. Commande WhatsApp, livraison Maroc. Palette unisexe, classe & chic." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-  <meta name="theme-color" content="#ff7ab6" />
+  <meta name="theme-color" content="#111111" />
   <style>
     :root{
-      --bg:#fff7fb;                 /* fond rose très pâle */
-      --ink:#1c2230;                /* texte */
-      --muted:#6b7280;              /* texte secondaire */
-      --brand:#ff7ab6;              /* rose YARA */
-      --brand-2:#7cdeff;            /* bleu clair */
-      --brand-3:#63e6c7;            /* vert d'eau */
-      --card:#ffffff;               /* cartes */
-      --shadow:0 10px 25px rgba(0,0,0,.07);
-      --b:#f1e6ef;                  /* bordures claires */
-      --wa:#25D366;                 /* WhatsApp */
+      /* Palette unisexe, neutre, chic */
+      --bg:#f6f6f6;          /* fond gris clair */
+      --card:#ffffff;        /* cartes */
+      --ink:#0f1113;         /* texte principal */
+      --muted:#6b7280;       /* texte secondaire */
+      --line:#e8e8ea;        /* bordures fines */
+      --accent:#111111;      /* noir profond */
+      --accent-2:#949aa3;    /* gris froid premium */
+      --wa:#25D366;          /* WhatsApp */
+      --shadow:0 10px 30px rgba(0,0,0,.06);
     }
     *{box-sizing:border-box}
     html,body{margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
@@ -30,122 +30,27 @@
     /* ===== NAV ===== */
     header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);z-index:50}
     .nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
-    .logo{display:flex;align-items:center;gap:10px}
-    .logo svg{width:44px;height:44px;filter:drop-shadow(var(--shadow))}
-    .brand{font-weight:800;font-size:22px;letter-spacing:.5px}
-    nav a{margin:0 10px;color:#3b3b3b;font-weight:600}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo svg{width:42px;height:42px;filter:drop-shadow(var(--shadow))}
+    .brand{font-weight:800;font-size:20px;letter-spacing:.08em}
+    nav a{margin:0 10px;color:#2b2f33;font-weight:600}
     nav a:hover{color:#000}
 
     /* ===== HERO ===== */
-    .hero{position:relative;overflow:hidden}
+    .hero{background:linear-gradient(180deg,#f6f6f6 0%, #efefef 100%);border-bottom:1px solid var(--line)}
     .hero-wrap{max-width:1200px;margin:auto;padding:46px 20px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
-    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;font-weight:700;font-size:12px}
-    h1{font-size:42px;line-height:1.05;margin:14px 0}
-    .lead{color:#374151;margin-bottom:18px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#111;color:#fff;font-weight:700;font-size:12px}
+    h1{font-size:40px;line-height:1.05;margin:14px 0}
+    .lead{color:#3b4046;margin-bottom:18px}
 
     .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:2px solid transparent;font-weight:700;box-shadow:var(--shadow)}
-    .btn.primary{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff}
-    .btn.ghost{border-color:#f6c1df;background:#fff}
-    .btn.wa{background:var(--wa);color:#fff}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);font-weight:700;box-shadow:var(--shadow);background:#fff}
+    .btn.primary{background:#111;color:#fff;border-color:#111}
+    .btn.ghost{background:#fff;color:#111}
+    .btn.wa{background:var(--wa);color:#fff;border-color:var(--wa)}
 
-    .hero-img{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 25px 60px rgba(255,122,182,.25)}
-    .hero-img:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,122,182,.15) 100%)}
+    .hero-img{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.10)}
 
-    .ribbons{position:absolute;inset:auto -10vw -120px -10vw;height:280px;background:radial-gradient(60% 90% at 10% 10%, rgba(255,122,182,.35), transparent),radial-gradient(50% 100% at 90% 40%, rgba(124,222,255,.35), transparent),radial-gradient(50% 100% at 40% 100%, rgba(99,230,199,.35), transparent);pointer-events:none}
-
-    /* ===== GRID PRODUITS ===== */
-    section{max-width:1200px;margin:46px auto;padding:0 20px}
-    h2{font-size:28px;margin:0 0 16px}
-
-    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .card{background:var(--card);border:1px solid var(--b);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
-    .thumb{aspect-ratio:4/3;overflow:hidden}
-    .card-body{padding:14px 14px 16px;display:flex;flex-direction:column;gap:6px}
-    .price{font-weight:800}
-    .sizes{display:flex;gap:8px;flex-wrap:wrap}
-    .chip{font-size:12px;padding:4px 10px;border-radius:999px;background:#f5f5f7;border:1px solid var(--b)}
-    .actions{margin-top:auto;display:flex;gap:8px}
-
-    /* ===== PICTO ===== */
-    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .feature{padding:16px;border-radius:16px;background:#fff;border:1px solid var(--b);box-shadow:var(--shadow)}
-    .feature strong{display:block;margin-bottom:6px}
-
-    /* ===== FOOTER ===== */
-    footer{max-width:1200px;margin:46px auto 26px;padding:0 20px;color:#5b6473}
-
-    @media (max-width:980px){
-      .hero-wrap{grid-template-columns:1fr}
-      .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .features{grid-template-columns:1fr}
-      h1{font-size:36px}
-    }
-    @media (max-width:640px){
-      .grid{grid-template-columns:1fr}
-      h1{font-size:32px}
-    }
-  </style>
-</head>
-<body>
-  <!-- ===== NAV ===== -->
-  <header>
-    <div class="nav">
-      <a class="logo" href="#">
-        <!-- LOGO YARA : goutte/feuille + Y -->
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#ff7ab6"/>
-              <stop offset="1" stop-color="#7cdeff"/>
-            </linearGradient>
-          </defs>
-          <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#g1)"/>
-          <path d="M20 22 L32 36 L44 22" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M32 36 Q36 42 32 48 Q28 42 32 36 Z" fill="#ffffff" opacity=".9"/>
-        </svg>
-        <span class="brand">YARA</span>
-      </a>
-      <nav>
-        <a href="#produits">Produits</a>
-        <a href="#comment">Comment ça marche</a>
-        <a href="#livraison">Livraison</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="hero-wrap">
-      <div>
-        <span class="badge">NOUVEAU • Décantés 5–15 ml</span>
-        <h1>Testez vos cosmétiques & parfums favoris <br> en formats <span style="background:linear-gradient(90deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">pratiques & colorés</span></h1>
-        <p class="lead">Flacons stériles, étiquetage pro, authentiques à partir des originaux. Commande rapide par WhatsApp — livraison partout au Maroc.</p>
-        <div class="cta">
-          <a class="btn wa" href="https://wa.me/2126XXXXXXXX?text=Bonjour%20YARA%2C%20je%20souhaite%20commander%20un%20d%C3%A9cant%C3%A9%20%3A%20%5BProduit%5D%20%7C%20%5BTaille%205%2F10%2F15%20ml%5D%20%7C%20Quantit%C3%A9%201" target="_blank">Commander via WhatsApp</a>
-          <a class="btn primary" href="https://docs.google.com/forms/d/FORM_ID" target="_blank">Commander par formulaire</a>
-          <a class="btn ghost" href="#produits">Voir les produits ↓</a>
-        </div>
-      </div>
-      <div class="hero-img">
-        <img alt="Cosmétiques et parfums YARA" src="https://images.unsplash.com/photo-1547887538-047f814d9b5b?q=80&w=1600&auto=format&fit=crop"/>
-      </div>
-    </div>
-    <div class="ribbons"></div>
-  </section>
-
-  <!-- ===== PRODUITS ===== -->
-  <section id="produits">
-    <h2>Best‑sellers</h2>
-    <div class="grid">
-      <!-- P1 -->
-      <article class="card">
-        <div class="thumb"><img alt="Coco Mademoiselle" src="https://images.unsplash.com/photo-1520975764746-4984f8a7cccd?q=80&w=1200&auto=format&fit=crop"></div>
-        <div class="card-body">
-          <strong>Coco Mademoiselle (EDP)</strong>
-          <div class="price">dès 69 MAD</div>
-          <div class="sizes"><span class="chip">5 ml</span><span class="chip">10 ml</span><span class="chip">15 ml</span></div>
-          <div class="actions">
-            <a class="btn wa" target="_blank" href="https://wa.me/2126XXXXXXXX?text=YARA%20-%20Coco%20Mademoiselle%20EDP%20-%205%20ml%20-%201%20pc">WhatsApp</a>
-            <a class="btn ghost" target="_blank" hre
+    /* ===== SECTIONS ===== */
+    section{max-width:1200px;margin:48px auto;padding:0 20px}
+    h2{font-size:26px;margin:
